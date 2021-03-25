@@ -1,2 +1,2 @@
-FLASK_APP=rising.py
+FLASK_APP=dumbtwitter.py
 ELASTICSEARCH_URL=http://localhost:9200
