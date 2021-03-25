@@ -1,0 +1,109 @@
+2021-03-25 12:34:13,658 ERROR: Exception on /search [GET] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/bwiffler/dev/rising/app/main/routes.py", line 138, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/Users/bwiffler/dev/rising/app/models.py", line 22, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/bwiffler/dev/rising/app/search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 153, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1662, in search
+    return self.transport.perform_request(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/transport.py", line 415, in perform_request
+    raise e
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 275, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/connection/base.py", line 322, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.RequestError: RequestError(400, 'parsing_exception', 'Unknown key for a VALUE_STRING in [fuzziness].')
+2021-03-25 12:34:45,342 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:79]
+2021-03-25 12:34:47,416 ERROR: Exception on /search [GET] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/bwiffler/dev/rising/app/main/routes.py", line 138, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/Users/bwiffler/dev/rising/app/models.py", line 22, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/bwiffler/dev/rising/app/search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 153, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1662, in search
+    return self.transport.perform_request(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/transport.py", line 415, in perform_request
+    raise e
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 275, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/connection/base.py", line 322, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.RequestError: RequestError(400, 'parsing_exception', '[multi_match] malformed query, expected [END_OBJECT] but found [FIELD_NAME]')
+2021-03-25 12:34:52,721 ERROR: Exception on /search [GET] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/bwiffler/dev/rising/app/main/routes.py", line 138, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/Users/bwiffler/dev/rising/app/models.py", line 22, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/bwiffler/dev/rising/app/search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 153, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1662, in search
+    return self.transport.perform_request(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/transport.py", line 415, in perform_request
+    raise e
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 275, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/elasticsearch/connection/base.py", line 322, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.RequestError: RequestError(400, 'parsing_exception', '[multi_match] malformed query, expected [END_OBJECT] but found [FIELD_NAME]')
+2021-03-25 12:35:37,227 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:79]
+2021-03-25 12:43:06,116 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:79]
+2021-03-25 12:43:47,980 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:79]

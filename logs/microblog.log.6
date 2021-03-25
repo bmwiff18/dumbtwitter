@@ -1,0 +1,115 @@
+2021-03-24 23:31:29,777 ERROR: Exception on /index [GET] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/bwiffler/dev/rising/app/main/routes.py", line 38, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/bwiffler/dev/rising/app/templates/index.html", line 32, in top-level template code
+    {{ form.username.label }}<br>
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.main.forms.PostForm object' has no attribute 'username'
+2021-03-24 23:32:51,545 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:75]
+2021-03-24 23:33:33,494 ERROR: Exception on /explore [GET] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/bwiffler/dev/rising/app/main/routes.py", line 53, in explore
+    return render_template('index.html', title=_('Explore'),
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/bwiffler/dev/rising/app/templates/index.html", line 29, in top-level template code
+    {{ form.hidden_tag() }}
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-03-24 23:33:48,245 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:75]
+2021-03-24 23:34:26,057 ERROR: Exception on /auth/reset_password_request [POST] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/app/auth/routes.py", line 61, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/bwiffler/dev/rising/app/auth/email.py", line 7, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/bwiffler/dev/rising/app/models.py", line 48, in get_reset_password_token
+    app.config['SECRET_KEY'], algorithm='HS256')
+NameError: name 'app' is not defined
+2021-03-24 23:35:29,861 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:75]
+2021-03-24 23:35:41,001 ERROR: Exception on /auth/reset_password_request [POST] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/app/auth/routes.py", line 61, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/bwiffler/dev/rising/app/auth/email.py", line 7, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/Users/bwiffler/dev/rising/app/models.py", line 48, in get_reset_password_token
+    current_app.config['SECRET_KEY'], algorithm='HS256')
+NameError: name 'current_app' is not defined
+2021-03-24 23:36:14,101 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:75]
+2021-03-25 00:12:04,033 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:79]
+2021-03-25 00:17:00,523 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:79]
+2021-03-25 00:17:19,063 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:79]

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ReadME Music</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+    <a href="/">Home</a>
+    <a href="/about">Where am i ?</a>
+      <hr>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <u1>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </u1>
+      {% endif %}
+      {% endwith %}
+      </hr>
+      <form id="form-user" action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <h1>ReadME Music</h1>
+        <p>
+          {{ form.username.label }}<br>
+          {{ form.username(size=32) }}
+          fill this out 4 a surprise haha.
+        </p>
+        <p>
+          {{ form.password.label }}<br>
+          {{ form.password(size=32) }}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+      </form>
+    </div>
+    <p> <button type="submit" id="button-advice" >Give me some advice please</button></p>
+    <p> <button type="submit" id="button-astrol" >Read my horoscope plz</button></p>
+    <p> <button type="submit" id="button-celebs" >Celebs???</button></p>
+
+    <div class="result-wrapper" id="results" hidden>
+      <img src="{{ url_for('static', filename='pics/paint.jpg') }}" alt="Paint"/>
+      <div class="result" id="default-result"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+</html>

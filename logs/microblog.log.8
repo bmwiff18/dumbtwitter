@@ -1,0 +1,107 @@
+2021-03-24 19:49:47,987 ERROR: Exception on /user/Bridget [GET] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/bwiffler/dev/rising/app/routes.py", line 85, in user
+    return render_template('user.html', user=user, posts=posts,
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/bwiffler/dev/rising/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/bwiffler/dev/rising/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/bwiffler/dev/rising/app/templates/user.html", line 33, in block "content"
+    {% for post in posts %}
+TypeError: 'Pagination' object is not iterable
+2021-03-24 19:50:31,847 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:46]
+2021-03-24 19:52:55,543 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:46]
+2021-03-24 20:03:45,513 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:48]
+2021-03-24 20:05:11,677 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:48]
+2021-03-24 20:38:32,960 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:48]
+2021-03-24 20:52:30,518 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:50]
+2021-03-24 21:02:06,973 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:50]
+2021-03-24 21:12:32,805 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:50]
+2021-03-24 21:14:53,310 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:50]
+2021-03-24 21:15:00,119 ERROR: Exception on /user/Bridget [GET] [in /Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/bwiffler/dev/rising/app/routes.py", line 86, in user
+    return render_template('user.html', user=user, posts=posts.items,
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/bwiffler/dev/rising/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/bwiffler/dev/rising/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/bwiffler/dev/rising/app/templates/base.html", line 52, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/Users/bwiffler/dev/rising/app/templates/user.html", line 11, in block "app_content"
+    <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
+  File "/Users/bwiffler/dev/rising/lib/python3.9/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'followed'
+2021-03-24 21:15:21,964 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:50]
+2021-03-24 21:16:23,591 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:50]
+2021-03-24 21:21:38,386 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:50]
+2021-03-24 21:30:12,784 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:52]
+2021-03-24 21:33:01,246 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:52]
+2021-03-24 21:48:30,048 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:51:29,978 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:51:34,188 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:51:40,497 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:52:46,453 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:53:16,931 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:53:24,194 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:53:31,521 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:53:39,249 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 21:53:44,277 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:58]
+2021-03-24 23:15:10,382 INFO: Microblog startup [in /Users/bwiffler/dev/rising/app/__init__.py:64]

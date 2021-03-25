@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'AtariClassicChunky-PxXP';
+  src: url('../fonts/atari-chunky/converted-files/AtariClassicChunky-PxXP.eot');
+  src: url('../fonts/atari-chunky/converted-files/AtariClassicChunky-PxXP.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/atari-chunky/converted-files/AtariClassicChunky-PxXP.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AtariClassicChunky';
+  src: url('../fonts/atari-chunky/converted-files/AtariClassicChunky.svg#AtariClassicChunky') format('svg'),
+       url('../fonts/atari-chunky/converted-files/AtariClassicChunky.ttf') format('truetype'),
+       url('fonts/atari-chunky/converted-files/AtariClassicChunky.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: url("../pics/space.gif") ; 
+}
+body, p {
+  font-family: "AtariClassicChunky-PxXP";
+  color: #FFB6C1;
+  -webkit-font-smoothing: none;
+}
+h1 {
+  font-family: "AtariClassicChunky-PxXP";
+  color: ghostwhite;
+  -webkit-font-smoothing: none;
+  font-size: 72px;
+}
+
+.result-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.result {
+	position: absolute;
+	top: 25%;
+	left: 51%;
+	transform: translate(-50%, -50%);
+	text-align: left;
+}
+
+.button-wrapper {
+  position: absolute;
+}
